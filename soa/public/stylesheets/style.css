@@ -1,6 +1,6 @@
 .slider{
-    width: 1917px;
-    height: 917px;
+    width: 1350px;
+    height: 600px;
     border-radius: 10px;
     overflow: hidden;
   }
@@ -21,16 +21,16 @@
   }
   
   .slide img{
-    width: 1917px;
-    height: 917px;
+    width: 1350px;
+    height: 600px;
   }
   
   /*css for manual slide navigation*/
   
   .navigation-manual{
     position: absolute;
-    width: 1917px;
-    margin-top: 350px;
+    width: 1350px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
   }
@@ -72,9 +72,9 @@
   .navigation-auto{
     position: absolute;
     display: flex;
-    width: 1917px;
+    width: 1350px;
     justify-content: center;
-    margin-top: 850px;
+    margin-top: 550px;
   }
   
   .navigation-auto div{
