@@ -18,7 +18,7 @@ router.get('/', async function(req, res, next) {
             death: death.rows[key].confirmed
         }
     }
-    res.render('index', { countrys: objectCountry });
+    res.render('index', { bring: objectCountry });
 });
 
 router.get('/map', async function(req, res, next) {
@@ -35,8 +35,8 @@ router.get('/map', async function(req, res, next) {
     res.render('map', { totalObject: objectTotal, Maps: getLatLong.rows });
 });
 
-router.get('/protect', async function(req, res, next) {
-    res.render('protect');
+router.get('/dt', async function(req, res, next) {
+    res.render('dt');
 });
 
 
@@ -77,6 +77,25 @@ router.get('/thailand', async function(req, res, next) {
         }
     }
     res.render('thailand', { countrys: objectCountry });
+});
+
+router.get('/totalcase', async function(req, res, next) {
+    const resultTH = await db.getAllCountryTH();
+    const confirmedTH = await db.getAllConfirmedTH();
+    const recoveredTH = await db.getAllRecoveredTH();
+    const deathTH = await db.getAllDeathTH();
+
+    let objectCountry = [];
+    for (const key in resultTH.rows) {
+        objectCountry[key] = {
+            state: resultTH.rows[key].state,
+            country: resultTH.rows[key].country,
+            confirmed: confirmedTH.rows[key].confirmed,
+            recovered: recoveredTH.rows[key].confirmed,
+            death: deathTH.rows[key].confirmed
+        }
+    }
+    res.render('totalcase', { countrys: objectCountry });
 });
 
 
