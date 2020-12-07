@@ -35,8 +35,8 @@ router.get('/map', async function(req, res, next) {
     res.render('map', { totalObject: objectTotal, Maps: getLatLong.rows });
 });
 
-router.get('/dt', async function(req, res, next) {
-    res.render('dt');
+router.get('/protect', async function(req, res, next) {
+    res.render('protect');
 });
 
 
