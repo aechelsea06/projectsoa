@@ -98,6 +98,25 @@ router.get('/totalcase', async function(req, res, next) {
     res.render('totalcase', { countrys: objectCountry });
 });
 
+router.get('/global', async function(req, res, next) {
+    const result = await db.getAllCountry();
+    const confirmed = await db.getAllConfirmed();
+    const recovered = await db.getAllRecovered();
+    const death = await db.getAllDeath();
+
+    let objectCountry = [];
+    for (const key in result.rows) {
+        objectCountry[key] = {
+            state: result.rows[key].state,
+            country: result.rows[key].country,
+            confirmed: confirmed.rows[key].confirmed,
+            recovered: recovered.rows[key].confirmed,
+            death: death.rows[key].confirmed
+        }
+    }
+    res.render('global', { bring: objectCountry });
+});
+
 
 
 

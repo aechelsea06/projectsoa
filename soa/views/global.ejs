@@ -43,7 +43,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="thailand">Thailand Situation</a>
-                        <a class="dropdown-item" href="global">Global Situation</a>
+                        <a class="dropdown-item" href="Country">Global Situation</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -56,7 +56,41 @@
             </form>
         </div>
     </nav>
-    
+
+    <div class=" container ">
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Country</th>
+                    <th>Confirmed</th>
+                    <th>Recovered</th>
+                    <th>Deaths</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% bring.forEach(function(data){ %>
+                <tr>
+                    <td>
+                        <%= data.state %>
+                    </td>
+                    <td>
+                        <%= data.country %>
+                    </td>
+                    <td>
+                        <%= data.confirmed %>
+                    </td>
+                    <td>
+                        <%= data.recovered %>
+                    </td>
+                    <td>
+                        <%= data.death %>
+                    </td>
+                </tr>
+                <% })  %>
+            </tbody>
+        </table>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
