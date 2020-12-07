@@ -57,10 +57,58 @@
         </div>
     </nav>
 
-    <div class="card text-white bg-Secondary">
-      <img class="card-img-top" src="https://images.prismic.io/helpster/d12f3057-15a8-43b5-a795-1bdce0be8617_covid2-02.jpg?auto=compress,format" 
-      alt="">
-    </div>
+    <div class="slider">
+        <div class="slides">
+          <!--radio buttons start-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--radio buttons end-->
+          <!--slide images start-->
+          <div class="slide first">
+            <img src="https://www.gj.mahidol.ac.th/main/wp-content/uploads/2020/04/Pink-and-Orange-Border-Stop-The-Spread-Facebook-Post.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://www.goldenland.co.th/FileManager/images/New%20Floder%20-%20%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A1%E0%B9%82%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%9419/01-04.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://s359.kapook.com/pagebuilder/9c59220b-0463-418a-abe0-c6dd63544a1d.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://i0.wp.com/www.pkcd.co.th/wp-content/uploads/2020/04/%E0%B9%80%E0%B8%8A%E0%B9%87%E0%B8%84%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3-covid19.jpg?fit=1040%2C1040&ssl=1" alt="">
+          </div>
+          <!--slide images end-->
+          <!--automatic navigation start-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--manual navigation end-->
+      </div>
+      <!--image slider end-->
+  
+      <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 5000);
+      </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
