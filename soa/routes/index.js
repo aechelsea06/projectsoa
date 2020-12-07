@@ -77,6 +77,24 @@ router.get('/thailand', async function(req, res, next) {
     res.render('thailand', { countrys: objectCountry });
 });
 
+router.get('/totalcases', async function(req, res, next) {
+    const resultTH = await db.getAllCountryTH();
+    const confirmedTH = await db.getAllConfirmedTH();
+    const recoveredTH = await db.getAllRecoveredTH();
+    const deathTH = await db.getAllDeathTH();
+
+    let objectCountry = [];
+    for (const key in resultTH.rows) {
+        objectCountry[key] = {
+            state: resultTH.rows[key].state,
+            country: resultTH.rows[key].country,
+            confirmed: confirmedTH.rows[key].confirmed,
+            recovered: recoveredTH.rows[key].confirmed,
+            death: deathTH.rows[key].confirmed
+        }
+    }
+    res.render('totalcases', { total: objectCountry });
+});
 
 
 module.exports = router;
