@@ -3,7 +3,7 @@ const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'postgres',
-    password: 'pluem',
+    password: '555678',
     port: 5432,
 })
 
@@ -49,7 +49,7 @@ async function gettotals(){
     return data;
 
 }
-async function getsum(){
+async function getdatamap(){
     const sql = `select  sum(confirmed_csv."3/23/2020") as confirm , sum(death_csv."3/23/2020") as death , sum(recovered_csv."3/23/2020") as recovered 
     from city_csv,confirmed_csv,death_csv,recovered_csv
     where city_csv.num = confirmed_csv.num and city_csv.num = death_csv.num and city_csv.num = recovered_csv.num `
@@ -64,7 +64,7 @@ async function getsum(){
 module.exports = {
     getdata,
     getth,
-    getsum,
+    getdatamap,
     gettotals,
     getmap
 

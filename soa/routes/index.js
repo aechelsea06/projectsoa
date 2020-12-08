@@ -27,11 +27,11 @@ router.get('/global',async function(req, res, next) {
   });
 
   router.get('/map',async function(req, res, next) {
-  const result = await db.getsum();
+  const result = await db.getdatamap();
   const result1 = await db.getmap();
   console.log(result.rows);
   console.log(result1.rows);
-  res.render('map', { resultData: result.rows, mapData: result1.rows });
+  res.render('map', { map: result.rows, click: result1.rows });
 });
 router.get('/totalcases',async function(req, res, next) {
   const result = await db.gettotals();
