@@ -20,4 +20,19 @@ const getMap = (data) => {
             .openPopup();
 
     }
+    /*'<% mapData.forEach(function(data){ %>'
+             var circle = [
+                 ["<b style='font-size:15pt;'> <%=data.country%> </b> <br><b style='font-size:10pt;'> Province : <%=data.province%><b><br><b style='font-size:8pt;'> Confirmed : <%=data.confirm%><b> <br><b style='font-size:8pt;'> Death : <%=data.dead%><b> <br><b style='font-size:8pt;'> Recovered : <%=data.recover%><b>", ('<%=data.lat%>'), ('<%=data.long%>')],
+             ];
+            for (var i = 0; i < circle.length; i++) {
+                 circle = L.circle([circle[i][1], circle[i][2]], {
+                     
+                         icon: Icon
+                     })
+                     .bindPopup(circle[i][0])
+                     .openPopup()
+                     .addTo(map);
+             }
+             '<% }); %>'
+             */
 }
