@@ -1,13 +1,13 @@
 .slider{
-    width: 1917px;
-    height: 917px;
+    width: 1345px;
+    height: 600px;
     border-radius: 10px;
     overflow: hidden;
   }
   
   .slides{
     width: 500%;
-    height: 500px;
+    height: 600px;
     display: flex;
   }
   
@@ -21,16 +21,16 @@
   }
   
   .slide img{
-    width: 1917px;
-    height: 917px;
+    width: 1345px;
+    height: 600px;
   }
   
   /*css for manual slide navigation*/
   
   .navigation-manual{
     position: absolute;
-    width: 1917px;
-    margin-top: 350px;
+    width: 1345px;
+    margin-top: -20px;
     display: flex;
     justify-content: center;
   }
@@ -72,9 +72,9 @@
   .navigation-auto{
     position: absolute;
     display: flex;
-    width: 1917px;
+    width: 1345px;
     justify-content: center;
-    margin-top: 850px;
+    margin-top: 580px;
   }
   
   .navigation-auto div{

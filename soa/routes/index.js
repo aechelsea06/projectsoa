@@ -39,9 +39,7 @@ router.get('/protect', async function(req, res, next) {
     res.render('protect');
 });
 
-
-
-router.get('/country', async function(req, res, next) {
+router.get('/global', async function(req, res, next) {
     const result = await db.getAllCountry();
     const confirmed = await db.getAllConfirmed();
     const recovered = await db.getAllRecovered();
@@ -57,7 +55,7 @@ router.get('/country', async function(req, res, next) {
             death: death.rows[key].confirmed
         }
     }
-    res.render('country', { countrys: objectCountry });
+    res.render('global', { bring: objectCountry });
 });
 
 router.get('/thailand', async function(req, res, next) {
@@ -79,7 +77,7 @@ router.get('/thailand', async function(req, res, next) {
     res.render('thailand', { countrys: objectCountry });
 });
 
-router.get('/totalcase', async function(req, res, next) {
+router.get('/totalcases', async function(req, res, next) {
     const resultTH = await db.getAllCountryTH();
     const confirmedTH = await db.getAllConfirmedTH();
     const recoveredTH = await db.getAllRecoveredTH();
@@ -95,29 +93,8 @@ router.get('/totalcase', async function(req, res, next) {
             death: deathTH.rows[key].confirmed
         }
     }
-    res.render('totalcase', { countrys: objectCountry });
+    res.render('totalcases', { total: objectCountry });
 });
-
-router.get('/global', async function(req, res, next) {
-    const result = await db.getAllCountry();
-    const confirmed = await db.getAllConfirmed();
-    const recovered = await db.getAllRecovered();
-    const death = await db.getAllDeath();
-
-    let objectCountry = [];
-    for (const key in result.rows) {
-        objectCountry[key] = {
-            state: result.rows[key].state,
-            country: result.rows[key].country,
-            confirmed: confirmed.rows[key].confirmed,
-            recovered: recovered.rows[key].confirmed,
-            death: death.rows[key].confirmed
-        }
-    }
-    res.render('global', { bring: objectCountry });
-});
-
-
 
 
 module.exports = router;
