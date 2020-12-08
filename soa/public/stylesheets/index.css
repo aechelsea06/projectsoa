@@ -1,16 +1,15 @@
 .body{
-  background-color: #000;
+  background-color: rgb(184, 81, 81);
 }
 .slider{
-    width: 1540px;
-    height: 600px;
-    border-radius: 10px;
+    width: 1530px;
+    height: 650px;
     overflow: hidden;
   }
   
   .slides{
     width: 500%;
-    height: 600px;
+    height: 650px;
     display: flex;
   }
   
@@ -24,26 +23,18 @@
   }
   
   .slide img{
-    width: 1540px;
-    height: 600px;
+    width: 1530px;
+    height: 650px;
   }
   
   /*css for manual slide navigation*/
   
   .navigation-manual{
     position: absolute;
-    width: 1540px;
-    margin-top: -20px;
+    width: 1530px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
-  }
-  
-  .manual-btn{
-    border: 2px solid #40D3DC;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
   }
   
   .manual-btn:not(:last-child){
@@ -75,9 +66,9 @@
   .navigation-auto{
     position: absolute;
     display: flex;
-    width: 1540px;
+    width: 1530px;
     justify-content: center;
-    margin-top: 580px;
+    margin-top: 600px;
   }
   
   .navigation-auto div{

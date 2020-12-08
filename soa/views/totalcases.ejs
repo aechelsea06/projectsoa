@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+  <body style="background-image: linear-gradient(rgba(22, 19, 17, 0.9), rgba(22, 19, 17, 0.9))">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">COVID19</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -59,6 +59,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <% totals.forEach(function(data){ %>
   <script>
+    
       var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
@@ -67,10 +68,11 @@ var chart = new Chart(ctx, {
     // The data for our dataset
     data: {
         labels: ['January', 'February', 'March'],
+        
         datasets: [{
             label: 'Confirmed',
             backgroundColor: 'green',
-            borderColor: 'green',
+            
             data: [
             '<%=data.confirm1%>',
             '<%=data.confirm2%>',
@@ -79,7 +81,6 @@ var chart = new Chart(ctx, {
         },{
             label: 'Recovered',
             backgroundColor: 'blue',
-            borderColor: 'blue',
             data: [
             '<%=data.recover1%>',
             '<%=data.recover2%>',
@@ -88,7 +89,6 @@ var chart = new Chart(ctx, {
         },{
             label: 'Death',
             backgroundColor: 'red',
-            borderColor: 'red',
             data: [
             '<%=data.dead1%>',
             '<%=data.dead2%>',
@@ -98,7 +98,12 @@ var chart = new Chart(ctx, {
     },
 
     // Configuration options go here
-    options: {}
+    options: {legend:{
+          
+            labels:{
+                fontColor: 'white',
+            }
+        }}
 });
   </script>
   <% })  %>

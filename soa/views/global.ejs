@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet"> 
 </head>
 
-<body>
+<body style="background-image: linear-gradient(rgba(22, 19, 17, 0.9), rgba(22, 19, 17, 0.9))">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">COVID19</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -58,9 +58,10 @@
         </div>
     </nav>
 
-    <div class=" container ">
-        <table class="table ">
-            <thead>
+    <div class=" container-fluid">
+        <table class="table " style="text-align: center;"> 
+        
+            <thead style="color:white;">
                 <tr>
                     <th>State</th>
                     <th>Country</th>
@@ -69,7 +70,7 @@
                     <th>Deaths</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody style="color:white;">
                 <% global.forEach(function(data){ %>
                 <tr>
                     <td>
