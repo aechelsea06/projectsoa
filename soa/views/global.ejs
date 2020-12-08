@@ -70,7 +70,7 @@
                 </tr>
             </thead>
             <tbody>
-                <% bring.forEach(function(data){ %>
+                <% global.forEach(function(data){ %>
                 <tr>
                     <td>
                         <%= data.state %>
@@ -79,13 +79,13 @@
                         <%= data.country %>
                     </td>
                     <td>
-                        <%= data.confirmed %>
+                        <%= data.confirm %>
                     </td>
                     <td>
-                        <%= data.recovered %>
+                        <%= data.recover %>
                     </td>
                     <td>
-                        <%= data.death %>
+                        <%= data.dead %>
                     </td>
                 </tr>
                 <% })  %>
