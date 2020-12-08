@@ -49,8 +49,8 @@
           </form>
         </div>
       </nav>
+    <div style="width: 700px; margin-left: 370px; margin-top: 50px;"><canvas id="myChart"></canvas></div>
     
-    <canvas id="myChart"></canvas>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -61,6 +61,7 @@
   <script>
     
       var ctx = document.getElementById('myChart').getContext('2d');
+      Chart.defaults.global.defaultFontColor = 'white';
 var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: 'bar',

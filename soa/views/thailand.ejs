@@ -97,7 +97,7 @@
         var ctx = document.getElementById('myChart').getContext('2d');
         
         
-
+        Chart.defaults.global.defaultFontColor = 'white';
 var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: 'line',
@@ -122,19 +122,12 @@ var chart = new Chart(ctx, {
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)'
             ],
-            borderWidth: 5
+            borderWidth: 4
         }]
     },
 
     // Configuration options go here
-    options: {
-        legend:{
-            labels:{
-                fontColor: 'white',
-            }
-            
-        }
-    }
+    options: {}
 });
     </script>
     <% })  %>
